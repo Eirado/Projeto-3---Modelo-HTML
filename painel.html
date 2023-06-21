@@ -22,7 +22,7 @@
 </head>
 <body>
 
-  <!-- Barra de navegação lateral -->
+ 
   <nav class="navbar navbar-dark bg-dark fixed-top">
     <a class="navbar-brand" href="#">Dashboard</a>
     <div class="d-flex">
@@ -42,7 +42,7 @@
   <div class="container-fluid">
     <div class="row">
 
-      <!-- Painel lateral -->
+     
       <nav class="col-md-2 d-none d-md-block bg-light sidebar">
         <div class="sidebar-sticky">
           <ul class="nav flex-column">
@@ -64,7 +64,7 @@
         </div>
       </nav>
 
-      <!-- Conteúdo principal -->
+     
       <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
           <h1 class="h2">Dashboard</h1>
@@ -115,7 +115,7 @@
           </div>
         </div>
 
-        <!-- Gráfico e Painel de log -->
+        
         <div class="row">
           <div class="col-md-6">
             <div class="card">
@@ -135,7 +135,7 @@
                 Log Panel
               </div>
               <div class="card-body" id="logPanel">
-                <!-- Conteúdo do painel de log -->
+                
                 <div class="card-body" id="logPanel">
                   <table class="table table-striped">
                     <thead>
@@ -156,7 +156,7 @@
                         <td>Failed to load data</td>
                         <td>Error</td>
                       </tr>
-                      <!-- Add more rows as needed -->
+                      
                     </tbody>
                   </table>
                 </div>
@@ -171,7 +171,7 @@
   </div>
 
   <script>
-    // Dados para o gráfico
+  
     var data = {
       labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
       datasets: [{
@@ -202,7 +202,7 @@
       }]
     };
 
-    // Configurações do gráfico
+  
     var options = {
       scales: {
         x: {
@@ -234,7 +234,7 @@
       }
     };
 
-    // Criação do gráfico
+    
     var ctx = document.getElementById('myChart').getContext('2d');
     var myChart = new Chart(ctx, {
       type: 'line',
@@ -242,7 +242,7 @@
       options: options
     });
 
-    // Função para adicionar entrada de log
+   
     function addLogEntry(logText) {
       var logPanel = document.getElementById('logPanel');
       var logEntry = document.createElement('p');
@@ -250,12 +250,12 @@
       logPanel.appendChild(logEntry);
     }
 
-    // Adicionar entradas de log fictícias
+ 
     addLogEntry("<strong>Log Entry 1:</strong> User login detected.");
     addLogEntry("<strong>Log Entry 2:</strong> Data backup completed.");
     addLogEntry("<strong>Log Entry 3:</strong> A new user has registered.");
     
-    // Função para exportar como PDF
+    
     function exportPDF() {
       var pdf = new jsPDF();
       var canvas = document.getElementById('myChart');
@@ -266,7 +266,7 @@
       pdf.save('dashboard.pdf');
     }
 
-    // Adicionar evento de clique ao botão de exportação de PDF
+    
     document.getElementById('exportPDF').addEventListener('click', exportPDF);
 
 
